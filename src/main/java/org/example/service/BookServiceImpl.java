@@ -7,7 +7,8 @@ import java.util.*;
 
 @Service("bookService")
 public class BookServiceImpl implements BookService{
-    static Map<Long, Book> map = Collections.synchronizedMap(new HashMap<>()); // To do: use a database to store book data
+    // To do: use a database to store book data, I do not have permission to install an app from a third party (i.e. mySQL)
+    static Map<Long, Book> map = Collections.synchronizedMap(new HashMap<>());
     @Override
     public List<Book> listAllBooks() {
         List<Book> bookList = new ArrayList<>(map.values());
